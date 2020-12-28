@@ -1,0 +1,46 @@
+.anime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  :global(.ant-btn),
+  :global(.ant-btn-primary) {
+    width: 400px;
+    height: 40px;
+    margin-bottom: 20px;
+    background-color: #ac46a3;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+
+    &:hover,
+    &:focus {
+      background-color: #ac46a3;
+    }
+  }
+
+  .genre:not(:last-child)::after {
+    content: ", ";
+  }
+
+  .loading {
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+
+    .spin {
+      position: relative;
+    }
+  }
+
+  :global(.ant-card-head-title) {
+    text-align: center;
+  }
+}
